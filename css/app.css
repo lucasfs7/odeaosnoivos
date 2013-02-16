@@ -7,6 +7,10 @@ body {
   font-family: "Griffy", Helvetica, Arial, sans-serif;
   color: #333;
 }
+a {
+  color: #ed6633;
+  text-decoration: none;
+}
 #app {
   width: 100%;
   height: 100%;
@@ -80,4 +84,43 @@ body {
   -moz-box-shadow: 0 0 5px #000000;
   -ms-box-shadow: 0 0 5px #000000;
   -o-box-shadow: 0 0 5px #000000;
+}
+#lightbox {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+#lightbox .close {
+  position: absolute;
+  top: 0;
+  right: 60px;
+  font-size: 100px;
+}
+#lightbox .content {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: -1000px;
+}
+#lightbox .content figure {
+  width: 100%;
+}
+#lightbox .content figure img {
+  width: 100%;
+  box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 10px #000000;
+  -moz-box-shadow: 0 0 10px #000000;
+  -ms-box-shadow: 0 0 10px #000000;
+  -o-box-shadow: 0 0 10px #000000;
+}
+#lightbox .content figure figcaption {
+  padding: 0 5px 5px 5px;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
 }

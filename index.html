@@ -25,10 +25,22 @@
     <li id="{{id}}">
       <figure>
         <a href="{{images.standard_resolution.url}}">
-          <img src="{{images.low_resolution.url}}" alt="Foto do Instagram">
+          <img src="{{images.low_resolution.url}}" alt="by @{{user.username}}">
         </a>
       </figure>
     </li>
+  </script>
+  <script id="lightbox-template" type="text/x-handlebars-template">
+    <figure>
+      <img src="{{images.standard_resolution.url}}" alt="by @{{user.username}}">
+      <figcaption>
+        Tirada por <a href="http://instagram.com/{{user.username}}" target="_blank">@{{user.username}}</a> 
+        {{#if location}}
+          em {{location.name}}
+        {{/if}}
+         - (<a href="{{link}}" target="_blank">{{link}}</a>)
+      </figcaption>
+    </figure>
   </script>
   <!-- scripts -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
