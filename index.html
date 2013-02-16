@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ode aos noivos - O casamento</title>
+  <link href='http://fonts.googleapis.com/css?family=Griffy' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/app.css" media="all">
+  <!--[if lt IE 9]>
+    <script src="dist/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <h1>Ode aos noivos: O Casamento</h1>
+      <h2>Estrelando: Cheila e Lucas</h2>
+      <h3>#OdeAosNoivos</h3>
+    </header>
+    <section id="gallery">
+      <ul id="images-list" class="loading"></ul>
+    </section>
+  </div>
+  <!-- handlebars template -->
+  <script id="image-template" type="text/x-handlebars-template">
+    <li id="{{id}}">
+      <figure>
+        <a href="{{images.standard_resolution.url}}">
+          <img src="{{images.low_resolution.url}}" alt="Foto do Instagram">
+        </a>
+      </figure>
+    </li>
+  </script>
+  <!-- scripts -->
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="https://raw.github.com/wycats/handlebars.js/1.0.0-rc.3/dist/handlebars.js"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="http://backbonejs.org/backbone-min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

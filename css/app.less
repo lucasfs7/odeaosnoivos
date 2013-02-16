@@ -1,0 +1,70 @@
+@import "mixins";
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eaeaea url("@{imgPath}/pattern-bg.jpg") center repeat;
+  font-family: "Griffy", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+
+  #header {
+    background: #fefefe;
+    width: 100%;
+    height: @headerHeight - (@appMargins * 2);
+    padding: @appMargins 0;
+    .box-shadow(0 0 5px #444);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    h1, h2 { margin: 0 @appMargins; }
+
+    h3 {
+      position: absolute;
+      bottom: @appMargins;
+      right: @appMargins;
+    }
+  }
+
+  #gallery {
+    margin: (10px + @headerHeight) 5px @appMargins 5px;
+    overflow: hidden;
+
+    #images-list {
+      width: 100%;
+      list-style: none;
+
+      &.loading { background: url("@{imgPath}/loading.gif") center no-repeat; }
+
+      li {
+        width: 20%;
+        float: left;
+        display: none;
+
+        a, img { display: block; }
+
+        img {
+          width: 90%;
+          margin: 5%;
+          .box-shadow(0 0 10px #000);
+          .grayscale(80%);
+        }
+
+        &:hover img {
+          .grayscale(0);
+          .box-shadow(0 0 5px #000);
+        }
+      }
+    }
+  }
+}
