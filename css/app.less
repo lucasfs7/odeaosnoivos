@@ -22,27 +22,29 @@ a {
   height: 100%;
 
   #header {
-    background: #fefefe;
-    width: 100%;
-    height: @headerHeight - (@appMargins * 2);
-    padding: @appMargins 0;
-    .box-shadow(0 0 5px #444);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    height: 90px;
+    margin: @appMargins;
+    position: relative;
 
-    h1, h2 { margin: 0 @appMargins; }
+    h1 {
+      height: 90px;
+      float: left;
+      .box-shadow(0 0 10px #000);
 
-    h3 {
-      position: absolute;
-      bottom: @appMargins;
-      right: @appMargins;
+      img {
+        height: 100%;
+        display: block;
+      }
+    }
+
+    h2 {
+      margin: 27px 0 0 20px;
+      float: left;
     }
   }
 
   #gallery {
-    margin: (10px + @headerHeight) 5px @appMargins 5px;
+    margin: 0 5px @appMargins 5px;
     overflow: hidden;
 
     #images-list {
