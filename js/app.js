@@ -44,12 +44,12 @@ var APP = {};
       APP.lightbox.content.html(html);
       APP.lightbox.container.height($(window).height());
       img = $("img", APP.lightbox.content);
-
+      APP.lightbox.container.fadeIn(500);
       img.load(function() {
-        APP.lightbox.container.fadeIn(function() {
+        setTimeout(function() {
           APP.lightbox.content.animate({top: 0}, 800);
           APP.lightbox.isShown = true;
-        });
+        }, 500);
       });
     };
 
