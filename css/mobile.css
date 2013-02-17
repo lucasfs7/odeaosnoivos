@@ -1,0 +1,11 @@
+#app #header h2 {
+  font-size: 20px;
+}
+#lightbox .close {
+  top: auto;
+  bottom: 0;
+  right: 0;
+}
+#lightbox .content {
+  width: 100%;
+}
