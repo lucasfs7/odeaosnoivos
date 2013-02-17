@@ -84,7 +84,7 @@ a {
   -o-box-shadow: 0 0 5px #000000;
 }
 #lightbox {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8) url("../img/loading.gif") center no-repeat;
   width: 100%;
   display: none;
   position: fixed;

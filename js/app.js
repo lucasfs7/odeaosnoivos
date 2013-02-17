@@ -37,12 +37,19 @@ var APP = {};
     APP.lightbox.isShown = false;
     
     APP.lightbox.open = function(context) {
-      var html = APP.lightbox.template.compiled(context);
+      var html;
+      var img;
+
+      html = APP.lightbox.template.compiled(context);
       APP.lightbox.content.html(html);
       APP.lightbox.container.height($(window).height());
-      APP.lightbox.container.fadeIn(function() {
-        APP.lightbox.content.animate({top: 0}, 800);
-        APP.lightbox.isShown = true;
+      img = $("img", APP.lightbox.content);
+
+      img.load(function() {
+        APP.lightbox.container.fadeIn(function() {
+          APP.lightbox.content.animate({top: 0}, 800);
+          APP.lightbox.isShown = true;
+        });
       });
     };
 
