@@ -41,9 +41,6 @@ var APP = {};
       APP.lightbox.content.html(html);
       APP.lightbox.container.height($(window).height());
       APP.lightbox.container.fadeIn(function() {
-        if (APP.lightbox.content.height() > $(window).height()) {
-          APP.lightbox.container.height(APP.lightbox.content.height());
-        }
         APP.lightbox.content.animate({top: 0}, 800);
         APP.lightbox.isShown = true;
       });
