@@ -10,6 +10,8 @@ function get_images($url) {
   curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
   $result = json_decode(curl_exec($ch));
 
+  global $data;
+
   foreach ($result->data as $d) {
     $data[] = $d;
   }
